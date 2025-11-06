@@ -18,7 +18,7 @@ export default function Login() {
       localStorage.setItem('token', token);
       setAuthToken(token);
       login(token);
-      navigate('/');
+      navigate('/home');
     } catch (err) {
       setMsg(err.response?.data?.error || 'Error');
     }

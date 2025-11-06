@@ -19,6 +19,37 @@ const userSchema = new mongoose.Schema({
     required: true,
     select: false, // Don't send password in API responses by default
   },
+  role: {
+    type: String,
+    enum: ['jobseeker', 'employer', 'admin'],
+    default: 'jobseeker',
+  },
+  // Profile fields
+  profileDetails: {
+    phone: String,
+    location: String,
+    about: String,
+    // For job seekers
+    education: [{
+      degree: String,
+      institution: String,
+      year: Number,
+      field: String
+    }],
+    skills: [String],
+    resume: {
+      fileName: String,
+      fileUrl: String,
+      uploadDate: Date
+    },
+    // For employers
+    company: {
+      name: String,
+      website: String,
+      industry: String,
+      size: String
+    }
+  }
 }, {
   timestamps: true, // Automatically adds createdAt and updatedAt fields
 });

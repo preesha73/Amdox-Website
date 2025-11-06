@@ -2,7 +2,12 @@ import React, { useState } from 'react';
 import api from '../api';
 
 export default function Register() {
-  const [form, setForm] = useState({ name: '', email: '', password: '' });
+  const [form, setForm] = useState({ 
+    name: '', 
+    email: '', 
+    password: '',
+    role: 'jobseeker'
+  });
   const [msg, setMsg] = useState(null);
   const [isError, setIsError] = useState(false);
 
@@ -56,6 +61,17 @@ export default function Register() {
               onChange={(e) => setForm({ ...form, password: e.target.value })}
               required
             />
+          </div>
+          <div className="form-group">
+            <label>Register as</label>
+            <select
+              value={form.role}
+              onChange={(e) => setForm({ ...form, role: e.target.value })}
+              required
+            >
+              <option value="jobseeker">Job Seeker</option>
+              <option value="employer">Employer</option>
+            </select>
           </div>
           <button type="submit" className="btn">
             Register

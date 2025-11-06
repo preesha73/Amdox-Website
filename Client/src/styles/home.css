@@ -1,0 +1,97 @@
+/* Homepage Styles (updated) */
+.welcome-container {
+  max-width: 900px;
+  margin: 3.5rem auto;
+  padding: 0 1rem;
+}
+
+.welcome-card {
+  width: 520px;
+  margin: 0 auto;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+  border-radius: 14px;
+  padding: 2.25rem 2rem;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+  text-align: center;
+}
+
+.welcome-title {
+  font-size: 1.8rem;
+  color: #0f172a;
+  margin-bottom: 0.35rem;
+  font-weight: 700;
+}
+
+.welcome-subtitle {
+  font-size: 0.98rem;
+  color: #475569;
+  margin-bottom: 1.25rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1.25rem 0 1.5rem;
+}
+
+.feature-card {
+  text-align: left;
+}
+
+.feature-card h3 {
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+}
+
+.feature-card ul {
+  margin: 0;
+  padding-left: 1rem;
+  color: #475569;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #6d28d9;
+  color: white;
+  box-shadow: 0 6px 18px rgba(109, 40, 217, 0.12);
+}
+
+.btn-secondary {
+  background: #374151;
+  color: white;
+}
+
+.job-search-section {
+  margin-top: 1.5rem;
+}
+
+.job-search-section h2 {
+  margin-bottom: 0.75rem;
+  color: #0f172a;
+}
+
+.login-section {
+  margin-top: 1.25rem;
+  color: #64748b;
+}
+
+.login-section a {
+  color: #6d28d9;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+@media (max-width: 720px) {
+  .welcome-card { width: 92%; }
+  .features-grid { grid-template-columns: 1fr; }
+}

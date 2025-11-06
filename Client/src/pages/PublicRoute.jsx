@@ -7,7 +7,7 @@ const PublicRoute = () => {
   const token = localStorage.getItem('token');
 
   // If token exists, redirect to dashboard, otherwise show the page
-  return token ? <Navigate to="/" replace /> : <Outlet />;
+  return token ? <Navigate to="/home" replace /> : <Outlet />;
 };
 
 export default PublicRoute;
